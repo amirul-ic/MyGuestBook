@@ -20,7 +20,7 @@ app,rt = fast_app()
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 
 def get_cet_time():
-    cet_tz = pytz.timezone("CET")
+    cet_tz = pytz.timezone("Asia/Kuala_Lumpur")
     return datetime.now(cet_tz)
 
 
