@@ -12,7 +12,7 @@ from fasthtml.common import *
 
 MAX_NAME_CHAR = 200
 MAX_MESSAGE_CHAR = 200
-TIMESTAMP_FMT = "%Y-%m-%d %I:%M:%S %p CET"
+TIMESTAMP_FMT = "%Y-%m-%d %I:%M:%S %p Kuala Lumpur"
 
 app,rt = fast_app()
 
