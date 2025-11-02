@@ -58,22 +58,27 @@ def render_message_list():
 def render_content():
     form = Form(
         Fieldset(
+            # Small input for name
             Input(
                 type="text",
                 name="name",
                 placeholder="Name",
                 required=True,
                 maxlength=MAX_NAME_CHAR,
+                style="display:block; width:100%; margin-bottom:10px;"
             ),
-            Input(
-                type="text",
+            # Larger text area for message (5x taller)
+            Textarea(
                 name="message",
                 placeholder="Message",
                 required=True,
                 maxlength=MAX_MESSAGE_CHAR,
+                style="display:block; width:100%; height:10em; margin-bottom:10px;"
             ),
-            Button("Submit", type="submit"),
+            # Submit button
+            Button("Submit", type="submit", style="display:block;"),
             role="group",
+            style="display:flex; flex-direction:column;"
         ),
         method="post",
         hx_post="/submit-message",
